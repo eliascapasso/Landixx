@@ -16,12 +16,13 @@
 
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- <script src="assets/js/jquery.easing.min.js"></script> -->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
+    <!-- <script src="assets/js/jquery.easing.min.js"></script> -->
     <script src="assets/js/scrolling-nav.js"></script>
 </head>
 
@@ -440,7 +441,8 @@
         typeWriter();
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+
 
     <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -464,7 +466,6 @@
 
     <script>
         $(document).ready(function () {
-            // Función para agregar la clase visible a las tarjetas que están en el área visible
             function showVisibleCards() {
                 $('.card-timeline.timeline-inner').each(function () {
                     var $card = $(this);
@@ -474,7 +475,6 @@
                 });
             }
 
-            // Función para verificar si un elemento está en el área visible
             function isElementInViewport(element) {
                 var rect = element[0].getBoundingClientRect();
                 return (
@@ -485,13 +485,12 @@
                 );
             }
 
-            // Mostrar tarjetas visibles al cargar la página
             showVisibleCards();
 
-            // Mostrar tarjetas visibles al hacer scroll
             $(window).on('scroll resize', showVisibleCards);
         });
     </script>
+
 
 </body>
 
