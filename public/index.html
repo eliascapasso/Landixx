@@ -33,7 +33,7 @@
                     <div class="brand header-brand">
                         <h1 class="m-0">
                             <img class="header-logo-image" src="src/images/LOGO LANDIXX TRANSPARENTE.png" alt="Logo"
-                                    style="width: 150px; margin-top: -40px;">
+                                style="width: 150px; margin-top: -40px;">
                         </h1>
                     </div>
                 </div>
@@ -81,7 +81,8 @@
                     <div class="hero-inner">
                         <div class="hero-copy">
                             <h1 class="hero-title mt-0">
-                                Landixx: Design and construction of web pages
+                                <div id="typewriter-text"><span class="font-family: 'IBM Plex Sans'">LANDIXX:</span>
+                                </div>
                             </h1>
                             <p class="hero-paragraph">
                                 Elevate your digital presence with irresistible landing pages
@@ -198,10 +199,10 @@
                 </div>
             </section>
 
-            <section class="pricing section">
+            <section class="timeline-inner" id="how">
                 <div class="container-sm">
-                    <div class="pricing-inner section-inner" id="how">
-                        <div class="pricing-header text-center">
+                    <div class="section-inner">
+                        <div class="text-center">
                             <h2 class="section-title mt-0">What will be the way to get your website?</h2>
                             <p class="section-paragraph mb-0">
                                 In our company, we take pride in the meticulousness with which we approach each step of
@@ -214,7 +215,7 @@
                         <!-- start timeline -->
                         <div class="timeline">
                             <div class="outer">
-                                <div class="card-timeline">
+                                <div class="card-timeline timeline-inner">
                                     <div class="info-timeline">
                                         <h4 class="title-timeline">1. We make your quote</h4>
                                         <p>
@@ -229,7 +230,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="card-timeline">
+                                <div class="card-timeline timeline-inner hidden">
                                     <div class="info-timeline">
                                         <h4 class="title-timeline">2. Terms and conditions agreement</h4>
                                         <p style="text-align: right;">
@@ -239,7 +240,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="card-timeline">
+                                <div class="card-timeline timeline-inner hidden">
                                     <div class="info-timeline">
                                         <h4 class="title-timeline">3. Information gathering form</h4>
                                         <p>
@@ -250,7 +251,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="card-timeline">
+                                <div class="card-timeline timeline-inner hidden">
                                     <div class="info-timeline">
                                         <h4 class="title-timeline">4. Website development</h4>
                                         <p style="text-align: right;">
@@ -260,7 +261,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="card-timeline">
+                                <div class="card-timeline timeline-inner hidden">
                                     <div class="info-timeline">
                                         <h4 class="title-timeline">5. Client reviews and product delivery</h4>
                                         <p>
@@ -423,6 +424,75 @@
     </div>
 
     <script src="dist/js/main.min.js"></script>
+
+    <script>
+        const text = "Design and construction of web pages";
+        let index = 0;
+
+        function typeWriter() {
+            document.getElementById('typewriter-text').innerHTML += text.charAt(index);
+            index++;
+            if (index < text.length) {
+                setTimeout(typeWriter, 30);
+            }
+        }
+
+        typeWriter();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var timelineInner = document.querySelector('.timeline-inner');
+
+            function handleScroll() {
+                var rect = timelineInner.getBoundingClientRect();
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+                if (rect.top <= windowHeight / 2 && rect.bottom >= 0) {
+                    timelineInner.style.opacity = "1";
+                    timelineInner.style.transform = "translateY(0)";
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Llamamos a la función para verificar si la sección es visible cuando la página se carga.
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function () {
+            // Función para agregar la clase visible a las tarjetas que están en el área visible
+            function showVisibleCards() {
+                $('.card-timeline.timeline-inner').each(function () {
+                    var $card = $(this);
+                    if (isElementInViewport($card) && !$card.hasClass('visible')) {
+                        $card.addClass('visible');
+                    }
+                });
+            }
+
+            // Función para verificar si un elemento está en el área visible
+            function isElementInViewport(element) {
+                var rect = element[0].getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Mostrar tarjetas visibles al cargar la página
+            showVisibleCards();
+
+            // Mostrar tarjetas visibles al hacer scroll
+            $(window).on('scroll resize', showVisibleCards);
+        });
+    </script>
+
 </body>
 
 </html>

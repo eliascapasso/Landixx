@@ -2201,3 +2201,14 @@ a {
 .card-timeline:nth-child(even)>.info-timeline>.title-timeline::before {
   right: -45px;
 }
+
+.timeline-inner .card-timeline {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-inner .card-timeline.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
