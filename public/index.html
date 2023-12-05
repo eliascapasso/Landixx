@@ -55,13 +55,13 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="page-scroll nav-link" href="">Home</a>
-                                        </li>
-                                        <li class="nav-item">
                                             <a class="page-scroll nav-link" href="#why">Why</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="page-scroll nav-link" href="#how">How to</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="button button-primary" href="#contact">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -87,8 +87,7 @@
                                     target="_blank">
                                     Request your quote
                                 </a>
-                                <a class="button"
-                                    href="mailto:landixx.info@gmail.com?subject=Quote%20Request&body=Hello%20Landixx,%0D%0A%0D%0AI%20am%20interested%20in%20a%20quote%20for%20your%20services.%20Please%20provide%20more%20information.%0D%0A%0D%0AThank%20you.">
+                                <a class="button" href="#contact">
                                     Get in touch
                                 </a>
                             </div>
@@ -283,121 +282,82 @@
                 </div>
             </section>
 
-            <section class="cta section">
-                <div class="container">
-                    <div class="cta-inner section-inner">
-                        <h3 class="section-title mt-0">Do you have any questions?</h3>
-                        <div class="cta-cta">
-                            <a class="button button-primary button-wide-mobile"
-                                href="mailto:landixx.info@gmail.com?subject=Quote%20Request&body=Hello%20Landixx,%0D%0A%0D%0AI%20am%20interested%20in%20a%20quote%20for%20your%20services.%20Please%20provide%20more%20information.%0D%0A%0D%0AThank%20you.">
-                                Get in touch
-                            </a>
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="cta contact">
+                <div class="section-inner">
+
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="section-title mt-0">Contact</h2>
+                            <p class="section-paragraph mb-0">
+                                Get in touch with us! Whether you have questions, exciting ideas to discuss, or just
+                                want to say hello, we're here for you. Fill out the contact form or use the provided
+                                information to meet us in person. We look forward to hearing from you and working
+                                together to bring your projects to life.
+                            </p>
                         </div>
+
+                        <div class="row mt-5">
+
+                            <div class="col-lg-4">
+                                <div class="info">
+                                    <div class="address">
+                                        <h4>Location:</h4>
+                                        <p>100 Harbour Esplanade, Docklands 3008, Melbourne, Australia</p>
+                                    </div>
+
+                                    <div class="email">
+                                        <h4>Email:</h4>
+                                        <p>landixx.info@gmail.com</p>
+                                    </div>
+
+                                    <div class="phone">
+                                        <h4>Call or message:</h4>
+                                        <p>+64 405 706 022</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 mt-5 mt-lg-0">
+
+                                <form action="https://formspree.io/f/mgejgwzw" method="post" role="form"
+                                    class="php-email-form">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <input type="text" name="name" class="form-control" id="name"
+                                                placeholder="Your Name" required>
+                                        </div>
+                                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" name="subject" id="subject"
+                                            placeholder="Subject" required>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                            required></textarea>
+                                    </div>
+                                    <div class="my-3">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    </div>
+                                    <button class="button button-primary button-wide-mobile" type="submit">Send
+                                        Message</button>
+                                </form>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                </div>
-            </section>
+            </section><!-- End Contact Section -->
         </main>
 
         <footer id="footer" class="footer-area">
-            <div class="footer-widget pt-30 pb-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                                <a class="logo" href="#">
-                                    <img class="header-logo-image" src="src/images/LOGO LANDIXX TRANSPARENTE.png"
-                                        alt="Logo" style="width: 150px; margin-top: -40px;">
-                                </a>
-                                <p class="text">
-                                    Elevate your online presence with Landixx – your trusted partner for bespoke web
-                                    design and construction of irresistible landing pages. Explore our services to
-                                    transform your digital experience. Request a quote or get in touch today.
-                                </p>
-                                <ul class="footer-social-links list-reset">
-                                    <li>
-                                        <a href="#">
-                                            <span class="screen-reader-text">Facebook</span>
-                                            <svg width="16" height="16" xmlns="https://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"
-                                                    fill="#0270D7" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="screen-reader-text">Twitter</span>
-                                            <svg width="16" height="16" xmlns="https://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"
-                                                    fill="#0270D7" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="screen-reader-text">Google</span>
-                                            <svg width="16" height="16" xmlns="https://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"
-                                                    fill="#0270D7" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-6">
-
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                                <div class="footer-title">
-                                    <h4 class="title">Quick Links</h4>
-                                </div>
-                                <ul class="contact-list">
-                                    <li>
-                                        <div class="contact-info d-flex">
-                                            <div class="info-content media-body">
-                                                <p class="text">
-                                                    <a href="sms:+61405706022">+61405706022</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="contact-info d-flex">
-                                            <div class="info-content media-body">
-                                                <p class="text"><a href="mailto:landixx.info@gmail.com">
-                                                        landixx.info@gmail.com</a></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="contact-info d-flex">
-                                            <div class="info-content media-body">
-                                                <p class="text"><a href="https://landixx.com">
-                                                        www.landixx.com</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="contact-info d-flex">
-                                            <div class="info-content media-body">
-                                                <p class="text"><i class="lni lni-map"></i> 100 Harbour Esplanade,
-                                                    Docklands
-                                                    3008, Melbourne, Australia</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="footer-copyright">
                 <div class="container">
                     <div class="row">
@@ -464,7 +424,45 @@
         });
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector(".php-email-form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
 
+                var formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                })
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        console.log(data)
+                        if (data.ok) {
+                            form.reset();
+                            showMessage("sent-message", "Your message has been sent. We will respond as soon as possible.");
+                        } else {
+                            // showMessage("error-message", "Error sending your message. Please try again.");
+                        }
+                    })
+                    .catch(function (error) {
+                        // showMessage("error-message", "Error sending your message. Please try again.");
+                    });
+            });
+
+            function showMessage(className, message) {
+                var messageContainer = document.querySelector("." + className);
+                messageContainer.innerHTML = message;
+                messageContainer.style.display = "block";
+            }
+        });
+    </script>
 </body>
 
 </html>
