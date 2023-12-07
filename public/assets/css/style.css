@@ -2450,3 +2450,15 @@ a {
   bottom: 15px;
   right: 15px;
 }
+
+/* CSS para la animación de entrada */
+.portfolio-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.portfolio-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}

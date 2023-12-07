@@ -64,7 +64,6 @@ $(function () {
         });
     });
 
-
     //===== close navbar-collapse when a  clicked
 
     $(".navbar-nav a").on('click', function () {
@@ -78,9 +77,6 @@ $(function () {
     $(".navbar-nav a").on('click', function () {
         $(".navbar-toggler").removeClass('active');
     });
-
-
-
 
     //===== Back to top
 
@@ -102,7 +98,6 @@ $(function () {
             scrollTop: 0,
         }, 1500);
     });
-
 
     //===== Svg
 
