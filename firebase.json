@@ -1,16 +1,17 @@
 {
   "hosting": {
-    "public": "public",
+    "redirects": [
+      {
+        "source": "**",
+        "destination": "https://www.landixx.com/:splat",
+        "type": 301
+      }
+    ],
+    "public": "public_directory",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
