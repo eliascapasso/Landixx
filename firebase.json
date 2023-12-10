@@ -2,7 +2,7 @@
   "hosting": {
     "redirects": [
       {
-        "source": "**",
+        "source": "https://www.landixx.com/**",
         "destination": "https://landixx.com/:splat",
         "type": 301
       }
