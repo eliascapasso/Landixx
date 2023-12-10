@@ -7,7 +7,7 @@
         "type": 301
       }
     ],
-    "public": "public_directory",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
