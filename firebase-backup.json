@@ -7,16 +7,6 @@
         "type": 301
       }
     ],
-    "rewrites": [
-      {
-        "source": "/contact",
-        "destination": "/pages/contact.html"
-      },
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
     "public": "public",
     "ignore": [
       "firebase.json",
