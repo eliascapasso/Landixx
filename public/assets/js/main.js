@@ -5,64 +5,64 @@ $(function () {
     /**
    * Easy selector helper function
    */
-    const select = (el, all = false) => {
-        el = el.trim()
-        if (all) {
-            return [...document.querySelectorAll(el)]
-        } else {
-            return document.querySelector(el)
-        }
-    }
+//     const select = (el, all = false) => {
+//         el = el.trim()
+//         if (all) {
+//             return [...document.querySelectorAll(el)]
+//         } else {
+//             return document.querySelector(el)
+//         }
+//     }
 
-    /**
-   * Easy event listener function
-   */
-    const on = (type, el, listener, all = false) => {
-        let selectEl = select(el, all)
-        if (selectEl) {
-            if (all) {
-                selectEl.forEach(e => e.addEventListener(type, listener))
-            } else {
-                selectEl.addEventListener(type, listener)
-            }
-        }
-    }
+//     /**
+//    * Easy event listener function
+//    */
+//     const on = (type, el, listener, all = false) => {
+//         let selectEl = select(el, all)
+//         if (selectEl) {
+//             if (all) {
+//                 selectEl.forEach(e => e.addEventListener(type, listener))
+//             } else {
+//                 selectEl.addEventListener(type, listener)
+//             }
+//         }
+//     }
 
-    /**
-   * Easy on scroll event listener 
-   */
-    const onscroll = (el, listener) => {
-        el.addEventListener('scroll', listener)
-    }
+//     /**
+//    * Easy on scroll event listener 
+//    */
+//     const onscroll = (el, listener) => {
+//         el.addEventListener('scroll', listener)
+//     }
 
-    //===== Sticky
+//     //===== Sticky
 
-    $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 20) {
-            $(".navbar-area").removeClass("sticky");
-        } else {
-            $(".navbar-area").addClass("sticky");
-        }
-    });
+//     $(window).on('scroll', function (event) {
+//         var scroll = $(window).scrollTop();
+//         if (scroll < 20) {
+//             $(".navbar-area").removeClass("sticky");
+//         } else {
+//             $(".navbar-area").addClass("sticky");
+//         }
+//     });
 
-    //===== Section Menu Active
+//     //===== Section Menu Active
 
-    var scrollLink = $('.page-scroll');
-    // Active link switching
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
+//     var scrollLink = $('.page-scroll');
+//     // Active link switching
+//     $(window).scroll(function () {
+//         var scrollbarLocation = $(this).scrollTop();
 
-        scrollLink.each(function () {
+//         scrollLink.each(function () {
 
-            var sectionOffset = $(this.hash).offset().top - 73;
+//             var sectionOffset = $(this.hash).offset().top - 73;
 
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-    });
+//             if (sectionOffset <= scrollbarLocation) {
+//                 $(this).parent().addClass('active');
+//                 $(this).parent().siblings().removeClass('active');
+//             }
+//         });
+//     });
 
     //===== close navbar-collapse when a  clicked
 
@@ -81,56 +81,56 @@ $(function () {
     //===== Back to top
 
     // Show or hide the sticky footer button
-    $(window).on('scroll', function (event) {
-        if ($(this).scrollTop() > 600) {
-            $('.back-to-top').fadeIn(200)
-        } else {
-            $('.back-to-top').fadeOut(200)
-        }
-    });
+    // $(window).on('scroll', function (event) {
+    //     if ($(this).scrollTop() > 600) {
+    //         $('.back-to-top').fadeIn(200)
+    //     } else {
+    //         $('.back-to-top').fadeOut(200)
+    //     }
+    // });
 
 
-    //Animate the scroll to yop
-    $('.back-to-top').on('click', function (event) {
-        event.preventDefault();
+    // //Animate the scroll to yop
+    // $('.back-to-top').on('click', function (event) {
+    //     event.preventDefault();
 
-        $('html, body').animate({
-            scrollTop: 0,
-        }, 1500);
-    });
+    //     $('html, body').animate({
+    //         scrollTop: 0,
+    //     }, 1500);
+    // });
 
-    //===== Svg
+    // //===== Svg
 
-    jQuery('img.svg').each(function () {
-        var $img = jQuery(this);
-        var imgID = $img.attr('id');
-        var imgClass = $img.attr('class');
-        var imgURL = $img.attr('src');
+    // jQuery('img.svg').each(function () {
+    //     var $img = jQuery(this);
+    //     var imgID = $img.attr('id');
+    //     var imgClass = $img.attr('class');
+    //     var imgURL = $img.attr('src');
 
-        jQuery.get(imgURL, function (data) {
-            // Get the SVG tag, ignore the rest
-            var $svg = jQuery(data).find('svg');
+    //     jQuery.get(imgURL, function (data) {
+    //         // Get the SVG tag, ignore the rest
+    //         var $svg = jQuery(data).find('svg');
 
-            // Add replaced image's ID to the new SVG
-            if (typeof imgID !== 'undefined') {
-                $svg = $svg.attr('id', imgID);
-            }
-            // Add replaced image's classes to the new SVG
-            if (typeof imgClass !== 'undefined') {
-                $svg = $svg.attr('class', imgClass + ' replaced-svg');
-            }
+    //         // Add replaced image's ID to the new SVG
+    //         if (typeof imgID !== 'undefined') {
+    //             $svg = $svg.attr('id', imgID);
+    //         }
+    //         // Add replaced image's classes to the new SVG
+    //         if (typeof imgClass !== 'undefined') {
+    //             $svg = $svg.attr('class', imgClass + ' replaced-svg');
+    //         }
 
-            // Remove any invalid XML tags as per http://validator.w3.org
-            $svg = $svg.removeAttr('xmlns:a');
+    //         // Remove any invalid XML tags as per http://validator.w3.org
+    //         $svg = $svg.removeAttr('xmlns:a');
 
-            // Replace image with new SVG
-            $img.replaceWith($svg);
+    //         // Replace image with new SVG
+    //         $img.replaceWith($svg);
 
-        }, 'xml');
+    //     }, 'xml');
 
-    });
+    // });
     
-    //=====  WOW active
+    // //=====  WOW active
 
-    new WOW().init();
+    // new WOW().init();
 });
