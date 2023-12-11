@@ -10,7 +10,7 @@
     "rewrites": [
       {
         "source": "/contact",
-        "destination": "/pages/contact.html"
+        "destination": "/contact.html"
       },
       {
         "source": "**",
