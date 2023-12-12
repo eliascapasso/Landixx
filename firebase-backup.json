@@ -9,12 +9,28 @@
     ],
     "rewrites": [
       {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
         "source": "/contact",
         "destination": "/contact.html"
       },
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/blog",
+        "destination": "/blog.html"
+      },
+      {
+        "source": "/blog/website-redesign-signs",
+        "destination": "/article-1.html"
+      },
+      {
+        "source": "/blog/limitations-of-outdated-website",
+        "destination": "/article-2.html"
+      },
+      {
+        "source": "/blog/adapt-embrace-digital-landscape",
+        "destination": "/article-3.html"
       }
     ],
     "public": "public",
