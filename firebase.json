@@ -9,28 +9,28 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
         "source": "/contact",
         "destination": "/contact.html"
       },
       {
         "source": "/blog",
-        "destination": "/blog.html"
+        "destination": "/blog/blog.html"
       },
       {
         "source": "/blog/website-redesign-signs",
-        "destination": "/article-1.html"
+        "destination": "/blog/website-redesign-signs.html"
       },
       {
         "source": "/blog/limitations-of-outdated-website",
-        "destination": "/article-2.html"
+        "destination": "/blog/article-2.html"
       },
       {
         "source": "/blog/adapt-embrace-digital-landscape",
-        "destination": "/article-3.html"
+        "destination": "/blog/article-3.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ],
     "public": "public",
