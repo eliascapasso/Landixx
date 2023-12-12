@@ -19,6 +19,8 @@
     <style>
         body {
             background-color: white;
+            color: #333; 
+            font-family: 'Arial', sans-serif;
         }
 
         nav {
@@ -27,10 +29,77 @@
             background-color: #1d2026;
         }
 
-        h1 {
-            color: black;
+        .navbar{
+            border-radius: 0px;
         }
-    </style>
+
+        h1 {
+            color: #333;
+            margin-top: 0.5em
+        }
+
+        article {
+            font-size: 16px; /* Tamaño de fuente para el artículo */
+            line-height: 1.6; /* Espaciado entre líneas */
+            color: #333;
+        }
+
+        article p {
+            margin-bottom: 15px; /* Espaciado inferior para los párrafos */
+            font-size: 16px;          
+            color: #333;
+        }
+
+        article ol,
+        article ul {
+            margin-bottom: 15px; /* Espaciado inferior para listas ordenadas y no ordenadas */
+        }
+
+        article li {
+            margin-bottom: 5px; /* Espaciado inferior para los elementos de la lista */
+        }
+
+        article img {
+            max-width: 100%; /* Imágenes responsivas que no se salen del contenedor */
+            height: auto;
+            margin-bottom: 15px; /* Espaciado inferior para las imágenes */
+        }
+        .lead{
+            margin-bottom: 15px; /* Espaciado inferior para los párrafos */
+            font-size: 18px;          
+            color: #333;
+        }
+
+        .hero-figure.anime-element {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 50%; /* Ajusta el ancho según sea necesario */
+            height: 100vh; /* Ajusta la altura según sea necesario */
+            z-index: -1; /* Para colocar el elemento detrás del contenido */
+        }
+
+        .hero-figure svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            margin-left: 0; /* Ajusta el margen izquierdo para que el contenido no se vea afectado por el elemento flotante */
+        }
+
+        .hero-figure-box-06, .hero-figure-box-07 {
+            background-color: #40434a;
+            box-shadow: -20px 32px 64px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width: 640px) {
+        .hero-figure {
+            display: none !important;
+         }
+        }
+
+        </style>
 </head>
 
 <body>
@@ -64,19 +133,33 @@
         </div>
     </nav>
 
+    <div class="hero-figure anime-element">
+        <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+            <rect width="528" height="396" style="fill:transparent;" />
+        </svg>
+        <div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+        <div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+        <div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+        <div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+        <div class="hero-figure-box hero-figure-box-06"></div>
+        <div class="hero-figure-box hero-figure-box-07"></div>
+        <div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+        <div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+        <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+    </div>
+
+
     <article class="container mt-5">
 
-        <h1 class="mb-4">5 Signs It's Time for a Website Redesign</h1>
+        <h1>5 Signs It's Time for a Website Redesign </h1>
 
-        <p class="lead"><strong>Introduction</strong></p>
-        <img src="https://via.placeholder.com/800x400" class="img-fluid rounded mb-4" alt="Website Redesign Image">
-        <p class="lead">In the fast-paced world of the internet, your website is your digital storefront. It’s the first
+          <img src="https://via.placeholder.com/800x400" class="img-fluid rounded mb-4" alt="Website Redesign Image">
+        
+          <p class="lead">In the fast-paced world of the internet, your website is your digital storefront. It’s the first
             impression you make on potential customers, and it needs to be up-to-date, user-friendly, and visually
-            appealing. If your website is starting to show its age, it may be time for a redesign.</p>
+            appealing. If your website is starting to show its age, it may be time for a redesign.But how do you know when it’s time to take the plunge?</p>
 
-        <p>But how do you know when it’s time to take the plunge?</p>
-
-        <p>Here are five signs that it’s time for a website redesign:</p>
+            <p class="mt-4"><strong>Here are five signs that it’s time for a website redesign:</strong></p>
 
         <ol>
             <li>Your website is outdated. If your website looks like it was designed in the early 2000s, it’s time
@@ -135,10 +218,9 @@
         <p>If you are not sure whether or not your website needs a redesign, contact a web design professional for a
             consultation. They can help you assess your website and make recommendations for improvement.</p>
 
-        <p class="lead">Thank you for reading!</p>
     </article>
 
-    <footer id="footer" class="footer-area" style="background-color: #1d2026;">
+    <footer id="footer" class="footer-area" style="background-color: white;">
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
