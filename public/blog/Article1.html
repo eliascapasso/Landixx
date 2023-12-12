@@ -34,8 +34,7 @@
         }
 
         h1 {
-            color: #333;
-            margin-top: 0.5em
+            color: #f4f4f4;
         }
 
         article {
@@ -45,7 +44,7 @@
         }
 
         article p {
-            margin-bottom: 15px; /* Espaciado inferior para los párrafos */
+            margin-bottom: 25px; /* Espaciado inferior para los párrafos */
             font-size: 16px;          
             color: #333;
         }
@@ -63,11 +62,6 @@
             max-width: 100%; /* Imágenes responsivas que no se salen del contenedor */
             height: auto;
             margin-bottom: 15px; /* Espaciado inferior para las imágenes */
-        }
-        .lead{
-            margin-bottom: 15px; /* Espaciado inferior para los párrafos */
-            font-size: 18px;          
-            color: #333;
         }
 
         .hero-figure.anime-element {
@@ -93,7 +87,45 @@
             box-shadow: -20px 32px 64px rgba(0, 0, 0, 0.25);
         }
 
-        @media (max-width: 640px) {
+        .hero-banner {
+        background-color: #007bff;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: white; /* Ajusta el color del texto según sea necesario para que sea legible en la imagen de fondo */
+        padding: 80px; /* Ajusta el espacio interno según sea necesario */
+    }
+
+    .container{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto; /* Esto asegura que el contenedor se centre horizontalmente en la pantalla */
+    }
+
+    .section-title {
+        font-size: 24px; 
+        font-weight: bold;
+        margin-top: 30px; 
+        margin-bottom: 40px;
+    }   
+
+    article ol,
+    article ul {
+        padding-left: 60px; 
+    }
+
+    article li {
+        margin-bottom: 10px;
+    }
+
+    article li a {
+        color: #007bff !important;
+        text-decoration: underline !important;
+    }
+
+    @media (max-width: 640px) {
         .hero-figure {
             display: none !important;
          }
@@ -148,18 +180,19 @@
         <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
     </div>
 
-
-    <article class="container mt-5">
-
+    <div class="hero-banner">
         <h1>5 Signs It's Time for a Website Redesign </h1>
-
-          <img src="https://via.placeholder.com/800x400" class="img-fluid rounded mb-4" alt="Website Redesign Image">
+    </div>
+   
+   
+    <article class="container mt-5">
+          <img src="../src/images/foto-articulo1.png" class="img-fluid rounded mb-4" alt="Website Redesign Image">
         
-          <p class="lead">In the fast-paced world of the internet, your website is your digital storefront. It’s the first
+          <p>In the fast-paced world of the internet, your website is your digital storefront. It’s the first
             impression you make on potential customers, and it needs to be up-to-date, user-friendly, and visually
             appealing. If your website is starting to show its age, it may be time for a redesign.But how do you know when it’s time to take the plunge?</p>
 
-            <p class="mt-4"><strong>Here are five signs that it’s time for a website redesign:</strong></p>
+            <p class="mt-4 section-title"><strong>Here are five signs that it’s time for a website redesign:</strong></p>
 
         <ol>
             <li>Your website is outdated. If your website looks like it was designed in the early 2000s, it’s time
@@ -180,7 +213,7 @@
 
         <p>If you are experiencing any of these signs, it’s time to start thinking about a website redesign.</p>
 
-        <p class="mt-4"><strong>Here are some tips for planning a successful website redesign:</strong></p>
+        <p class="mt-4 section-title"><strong>Here are some tips for planning a successful website redesign:</strong></p>
 
         <ul>
             <li>Set clear goals. What do you want to achieve with your website redesign?</li>
@@ -188,14 +221,13 @@
             <li>Research your competition. What are other businesses in your industry doing with their websites?
             </li>
             <li>Create a budget. How much are you willing to spend on a redesign?</li>
-            <li>Hire a professional web designer. A good web designer can help you create a website that is both
-                beautiful and functional.</li>
+            <li><a href="https://landixx.com/contact" target="_blank">Hire a professional web designer.</a> A good web designer can help you create a website that is both beautiful and functional.</li>
         </ul>
 
         <p>A website redesign can be a daunting task, but it is a worthwhile investment that can pay off in the long
             run.</p>
 
-        <p class="mt-4"><strong>Here are some additional tips:</strong></p>
+        <p class="mt-4 section-title"><strong>Here are some additional tips:</strong></p>
 
         <ul>
             <li>Use a content management system (CMS). A CMS will make it easy for you to update your website
@@ -212,8 +244,6 @@
 
         <p>By following these tips, you can create a website that is both beautiful and functional, and that will
             help you achieve your business goals.</p>
-
-        <p class="mt-4"><strong>Conclusion</strong></p>
 
         <p>If you are not sure whether or not your website needs a redesign, contact a web design professional for a
             consultation. They can help you assess your website and make recommendations for improvement.</p>
