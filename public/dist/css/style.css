@@ -4051,6 +4051,10 @@ label {
   .hero-figure-box-09 {
     display: none
   }
+
+  .hero-figure {
+    display: none !important;
+  }
 }
 
 @media (min-width: 641px) {
@@ -4085,7 +4089,7 @@ label {
   }
 
   .hero-figure svg {
-    width: auto
+    width: auto;
   }
 }
 
