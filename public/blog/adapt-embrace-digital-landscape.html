@@ -11,7 +11,8 @@
     <meta name="keywords" content="digital landscape, adapt to change, embrace digital era, success in digital world">
 
     <!-- Etiquetas Open Graph (og:) para redes sociales -->
-    <meta property="og:title" content="The World Has Changed: Why You Need to Adapt and Embrace the New Digital Landscape">
+    <meta property="og:title"
+        content="The World Has Changed: Why You Need to Adapt and Embrace the New Digital Landscape">
     <meta property="og:description"
         content="Understand the profound changes in our world and why adapting to the new digital landscape is crucial. Learn how embracing change can lead to success in the evolving digital era.">
     <meta property="og:image" content="../src/images/adapt-new-digital-era.png">
@@ -158,6 +159,20 @@
                 margin: auto;
             }
         }
+
+        /* Estilos para el recuadro de redes sociales */
+        .social-sharing-box {
+            z-index: 9999;
+            text-align: center;
+            position: fixed;
+            top: 60%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -216,39 +231,85 @@
 
 
     <article class="container mt-5">
+        <!-- Recuadro de redes sociales -->
+        <div class="social-sharing-box" id="socialSharingBox">
+            <b>Share this post</b>
+            <div class="col-12 mt-2">
+                <a onclick="shareOnFacebook()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/facebook-32.png" /></i></a>
+                <a onclick="shareOnTwitter()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/twitter-32.png" /></i></a>
+                <a onclick="shareOnLinkedIn()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/linkedin-32.png" /></i></a>
+                <a onclick="shareOnWhatsApp()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/wsp-32.png" /></i></a>
+            </div>
+        </div>
+
         <img src="../src/images/foto-articulo1.png" class="img-fluid rounded mb-4" alt="Outdated website">
 
-            <p>The world has changed dramatically in recent years, and the pace of change is only accelerating. Technological advancements, globalization, and evolving consumer expectations have all combined to create a new landscape that demands adaptation. In this new environment, it is more crucial than ever for individuals and businesses to embrace change and develop the skills and strategies needed to thrive.</p>
-            <p>One of the most significant changes in the world is the rise of the digital economy. The internet and digital technologies have transformed the way we live, work, and interact with each other. Businesses that want to succeed in this new environment need to have a strong online presence. This is where a website comes in.</p>
-            <p><strong>The Importance of Websites in the Digital Age</strong></p>
-            <p>A website is your online storefront, your digital business card, and your first impression to potential customers. It is the hub of your online presence, and it plays a critical role in attracting new customers, building relationships, and driving sales.</p>
-            <p>Having a website is no longer optional; it is essential. Here are just a few reasons why:</p>
-            <ul>
-                <li><strong>Increased Visibility:</strong> A website makes your business visible to a global audience, 24/7. This means you can reach potential customers anywhere in the world, regardless of their location.</li>
-                <li><strong>Improved Brand Image:</strong> A well-designed website can help to create a professional and trustworthy image for your brand. This can lead to increased customer trust and confidence.</li>
-                <li><strong>Enhanced Credibility:</strong> A website gives your business legitimacy and credibility. It shows potential customers that you are a serious business and that you are here to stay.</li>
-                <li><strong>Increased Sales and Leads:</strong> A website can be a powerful tool for generating leads and sales. By providing valuable content and offering a clear call to action, you can convert visitors into customers.</li>
-                <li><strong>Improved Customer Service:</strong> A website can be used to provide customer service and support. You can use your website to answer frequently asked questions, provide product information, and offer online support options.</li>
-            </ul>
-            <p><strong>The Challenges of Adapting to Change</strong></p>
-            <p>While the benefits of adapting to change are clear, it is not always easy. Some of the challenges that people and businesses face include:</p>
-            <ul>
-                <li><strong>Fear of the Unknown:</strong> Change can be scary, and it is natural to resist it. However, it is important to remember that change is inevitable. The best way to deal with change is to embrace it and learn to adapt.</li>
-                <li><strong>Lack of Knowledge and Skills:</strong> The digital landscape is constantly evolving, and it can be difficult to keep up with the latest trends and technologies. However, there are many resources available to help you learn new skills and stay up-to-date.</li>
-                <li><strong>Resistance to Change:</strong> Some people and businesses are resistant to change, and they may be reluctant to adopt new technologies or processes. It is important to overcome this resistance and embrace change in order to succeed in the new digital landscape.</li>
-            </ul>
-            <p><strong>How to Adapt and Thrive in the New Digital Landscape</strong></p>
-            <p>There are a number of things you can do to adapt and thrive in the new digital landscape:</p>
-            <ul>
-                <li><strong>Be Open to Change:</strong> The first step to adapting to change is to be open to it. Accept that change is inevitable and that it is necessary for success.</li>
-                <li><strong>Embrace Learning:</strong> Never stop learning new things. Take advantage of the many resources available to learn new skills and stay up-to-date on the latest trends and technologies.</li>
-                <li><strong>Be Flexible:</strong> Be willing to adapt your plans and strategies as needed. The world is constantly changing, and you need to be able to change with it.</li>
-                <li><strong>Focus on Innovation:</strong> Look for new and innovative ways to do things. Technology is constantly evolving, and there are always new opportunities to improve your business.</li>
-                <li><strong>Build Relationships:</strong> Build strong relationships with your customers, partners, and employees. These relationships will be crucial for your success in the new digital landscape.</li>
-            </ul>
-            <p>The world has changed, and it is important to adapt. By embracing change, learning new skills, and being flexible, you can thrive in the new digital landscape. A website is an essential tool for businesses that want to succeed in this new environment. By investing in a website, you can increase your visibility, improve your brand image, generate leads and sales, and improve customer service.</p>
-            <p>If you are not sure how to get started, there are many resources available to help you. You can find information online, or you can <a href="https://landixx.com/contact" target="_blank">hire a professional</a> to help you design and develop your website.</p>
-            <p>Don't wait to adapt to the changing world. Start today and take your business to the next level.</p>
+        <p>The world has changed dramatically in recent years, and the pace of change is only accelerating.
+            Technological advancements, globalization, and evolving consumer expectations have all combined to create a
+            new landscape that demands adaptation. In this new environment, it is more crucial than ever for individuals
+            and businesses to embrace change and develop the skills and strategies needed to thrive.</p>
+        <p>One of the most significant changes in the world is the rise of the digital economy. The internet and digital
+            technologies have transformed the way we live, work, and interact with each other. Businesses that want to
+            succeed in this new environment need to have a strong online presence. This is where a website comes in.</p>
+        <p><strong>The Importance of Websites in the Digital Age</strong></p>
+        <p>A website is your online storefront, your digital business card, and your first impression to potential
+            customers. It is the hub of your online presence, and it plays a critical role in attracting new customers,
+            building relationships, and driving sales.</p>
+        <p>Having a website is no longer optional; it is essential. Here are just a few reasons why:</p>
+        <ul>
+            <li><strong>Increased Visibility:</strong> A website makes your business visible to a global audience, 24/7.
+                This means you can reach potential customers anywhere in the world, regardless of their location.</li>
+            <li><strong>Improved Brand Image:</strong> A well-designed website can help to create a professional and
+                trustworthy image for your brand. This can lead to increased customer trust and confidence.</li>
+            <li><strong>Enhanced Credibility:</strong> A website gives your business legitimacy and credibility. It
+                shows potential customers that you are a serious business and that you are here to stay.</li>
+            <li><strong>Increased Sales and Leads:</strong> A website can be a powerful tool for generating leads and
+                sales. By providing valuable content and offering a clear call to action, you can convert visitors into
+                customers.</li>
+            <li><strong>Improved Customer Service:</strong> A website can be used to provide customer service and
+                support. You can use your website to answer frequently asked questions, provide product information, and
+                offer online support options.</li>
+        </ul>
+        <p><strong>The Challenges of Adapting to Change</strong></p>
+        <p>While the benefits of adapting to change are clear, it is not always easy. Some of the challenges that people
+            and businesses face include:</p>
+        <ul>
+            <li><strong>Fear of the Unknown:</strong> Change can be scary, and it is natural to resist it. However, it
+                is important to remember that change is inevitable. The best way to deal with change is to embrace it
+                and learn to adapt.</li>
+            <li><strong>Lack of Knowledge and Skills:</strong> The digital landscape is constantly evolving, and it can
+                be difficult to keep up with the latest trends and technologies. However, there are many resources
+                available to help you learn new skills and stay up-to-date.</li>
+            <li><strong>Resistance to Change:</strong> Some people and businesses are resistant to change, and they may
+                be reluctant to adopt new technologies or processes. It is important to overcome this resistance and
+                embrace change in order to succeed in the new digital landscape.</li>
+        </ul>
+        <p><strong>How to Adapt and Thrive in the New Digital Landscape</strong></p>
+        <p>There are a number of things you can do to adapt and thrive in the new digital landscape:</p>
+        <ul>
+            <li><strong>Be Open to Change:</strong> The first step to adapting to change is to be open to it. Accept
+                that change is inevitable and that it is necessary for success.</li>
+            <li><strong>Embrace Learning:</strong> Never stop learning new things. Take advantage of the many resources
+                available to learn new skills and stay up-to-date on the latest trends and technologies.</li>
+            <li><strong>Be Flexible:</strong> Be willing to adapt your plans and strategies as needed. The world is
+                constantly changing, and you need to be able to change with it.</li>
+            <li><strong>Focus on Innovation:</strong> Look for new and innovative ways to do things. Technology is
+                constantly evolving, and there are always new opportunities to improve your business.</li>
+            <li><strong>Build Relationships:</strong> Build strong relationships with your customers, partners, and
+                employees. These relationships will be crucial for your success in the new digital landscape.</li>
+        </ul>
+        <p>The world has changed, and it is important to adapt. By embracing change, learning new skills, and being
+            flexible, you can thrive in the new digital landscape. A website is an essential tool for businesses that
+            want to succeed in this new environment. By investing in a website, you can increase your visibility,
+            improve your brand image, generate leads and sales, and improve customer service.</p>
+        <p>If you are not sure how to get started, there are many resources available to help you. You can find
+            information online, or you can <a href="https://landixx.com/contact" target="_blank">hire a professional</a>
+            to help you design and develop your website.</p>
+        <p>Don't wait to adapt to the changing world. Start today and take your business to the next level.</p>
 
     </article>
 
@@ -306,6 +367,50 @@
         gtag('js', new Date());
 
         gtag('config', 'G-JJ4TD9MB08');
+    </script>
+
+    <script>
+        // Función para compartir en Facebook
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            window.open(facebookShareUrl, '_blank');
+        }
+
+        // Función para compartir en Twitter
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const twitterShareUrl = `https://twitter.com/intent/tweet?url=${url}`;
+            window.open(twitterShareUrl, '_blank');
+        }
+
+        // Función para compartir en LinkedIn
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            window.open(linkedInShareUrl, '_blank');
+        }
+
+        // Función para compartir en WhatsApp
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const whatsappShareUrl = `https://api.whatsapp.com/send?text=${url}`;
+            window.open(whatsappShareUrl, '_blank');
+        }
+
+        // JavaScript para mostrar/ocultar el recuadro de redes sociales
+        document.addEventListener('DOMContentLoaded', function () {
+            const socialSharingBox = document.getElementById('socialSharingBox');
+            const scrollThreshold = 200; // Ajusta este valor según sea necesario
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > scrollThreshold) {
+                    socialSharingBox.style.opacity = 1;
+                } else {
+                    socialSharingBox.style.opacity = 0;
+                }
+            });
+        });
     </script>
 </body>
 

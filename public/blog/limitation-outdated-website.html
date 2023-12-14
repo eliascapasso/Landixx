@@ -158,6 +158,20 @@
                 margin: auto;
             }
         }
+
+        /* Estilos para el recuadro de redes sociales */
+        .social-sharing-box {
+            z-index: 9999;
+            text-align: center;
+            position: fixed;
+            top: 60%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -216,6 +230,21 @@
 
 
     <article class="container mt-5">
+        <!-- Recuadro de redes sociales -->
+        <div class="social-sharing-box" id="socialSharingBox">
+            <b>Share this post</b>
+            <div class="col-12 mt-2">
+                <a onclick="shareOnFacebook()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/facebook-32.png" /></i></a>
+                <a onclick="shareOnTwitter()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/twitter-32.png" /></i></a>
+                <a onclick="shareOnLinkedIn()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/linkedin-32.png" /></i></a>
+                <a onclick="shareOnWhatsApp()" target="_blank" style="cursor: pointer;"><img
+                        src="../dist/images/wsp-32.png" /></i></a>
+            </div>
+        </div>
+
         <img src="../src/images/foto-articulo1.png" class="img-fluid rounded mb-4" alt="Outdated website">
 
         <p>In today's digital age, your website is your 24/7 storefront, your online business card, and your first
@@ -361,6 +390,50 @@
         gtag('js', new Date());
 
         gtag('config', 'G-JJ4TD9MB08');
+    </script>
+
+    <script>
+        // Función para compartir en Facebook
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            window.open(facebookShareUrl, '_blank');
+        }
+
+        // Función para compartir en Twitter
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const twitterShareUrl = `https://twitter.com/intent/tweet?url=${url}`;
+            window.open(twitterShareUrl, '_blank');
+        }
+
+        // Función para compartir en LinkedIn
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            window.open(linkedInShareUrl, '_blank');
+        }
+
+        // Función para compartir en WhatsApp
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const whatsappShareUrl = `https://api.whatsapp.com/send?text=${url}`;
+            window.open(whatsappShareUrl, '_blank');
+        }
+
+        // JavaScript para mostrar/ocultar el recuadro de redes sociales
+        document.addEventListener('DOMContentLoaded', function () {
+            const socialSharingBox = document.getElementById('socialSharingBox');
+            const scrollThreshold = 200; // Ajusta este valor según sea necesario
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > scrollThreshold) {
+                    socialSharingBox.style.opacity = 1;
+                } else {
+                    socialSharingBox.style.opacity = 0;
+                }
+            });
+        });
     </script>
 </body>
 
