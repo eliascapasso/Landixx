@@ -29,6 +29,10 @@
         "destination": "/blog/adapt-embrace-digital-landscape.html"
       },
       {
+        "source": "/blog/improve-website-ux-7-strategies",
+        "destination": "/blog/improve-website-ux-7-strategies.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
