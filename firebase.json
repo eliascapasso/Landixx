@@ -33,6 +33,10 @@
         "destination": "/blog/improve-website-ux-7-strategies.html"
       },
       {
+        "source": "/blog/need-online-presence",
+        "destination": "/blog/need-online-presence.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
