@@ -37,6 +37,10 @@
         "destination": "/blog/need-online-presence.html"
       },
       {
+        "source": "/blog/perfect-domain",
+        "destination": "/blog/perfect-domain.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
